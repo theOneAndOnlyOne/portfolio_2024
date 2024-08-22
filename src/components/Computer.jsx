@@ -165,4 +165,4 @@ videoTexture.magFilter = THREE.LinearFilter;
   )
 });
 
-useGLTF.preload('/elComputer.glb')
+useGLTF.preload('./portfolio_2024/3d_models/computer.glb')
