@@ -16,7 +16,7 @@ function Portfolio({ className }) {
 
   const transitionClasses = "transition-all duration-500 ${!expanded ? 'delay-500' : ''} ease-in-out";
   const expandedClasses = "max-h-0 opacity-0 my-0";
-  const collapsedClasses = "max-h-[1000px] opacity-100";
+  const collapsedClasses = "max-h-[2300px] opacity-100";
   const spacingClasses = "md:mb-8 mb-16";
 
   return (
