@@ -24,7 +24,7 @@ const Collapsible = () => {
             return newStates;
         });
 
-        const soundPath = openStates[index] ? '/sounds/sfx/close.wav' : '/sounds/sfx/open.wav';
+        const soundPath = openStates[index] ? './portfolio_2024/sounds/sfx/close.wav' : './portfolio_2024/sounds/sfx/open.wav';
         const audio = new Audio(soundPath);
         audio.play();
     };
@@ -58,7 +58,7 @@ const Collapsible = () => {
                             <h2 className="col-span-2 text-black transition-colors duration-400 ease-in-out text-xs font-DMMono">{job.period}</h2>
                             <div className="col-span-1 flex justify-end">
                                 <img 
-                                    src={openStates[index] ? "/icons/minus-icon.svg" : "/icons/plus-icon.svg"} 
+                                    src={openStates[index] ? "./portfolio_2024/icons/minus-icon.svg" : "./portfolio_2024/icons/plus-icon.svg"} 
                                     alt={openStates[index] ? "-" : "+"} 
                                     className="w-4 h-4" 
                                 />

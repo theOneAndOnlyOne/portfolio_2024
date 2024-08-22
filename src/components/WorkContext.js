@@ -21,7 +21,7 @@ export function WorkProvider({ children }) {
             title: 'Lead Software Developer',
             company: 'QVCL',
             period: '2022 / 2023',
-            image: '/images/qvcl.gif',
+            image: './portfolio_2024/images/qvcl.gif',
             description: 'Designed and developed virtual reality experiments and systems for the Queen\'s Visual Cognition Laboratory, contributing to research on visual search and cognitive science',
             skills: 'Unity  C#/C  Python  JavaScript  React.js  Node.js'
         }

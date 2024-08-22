@@ -6,10 +6,10 @@ function Projects({ sendExpandedStatToParent }) {
   const handleMoreClick = () => {
     setExpanded(!expanded);
     if(expanded) {
-      const closeSound = new Audio(`/sounds/sfx/close2.wav`);
+      const closeSound = new Audio(`./portfolio_2024/sounds/sfx/close2.wav`);
       closeSound.play();
     } else {
-      const openSound = new Audio(`/sounds/sfx/open2.wav`);
+      const openSound = new Audio(`./portfolio_2024/sounds/sfx/open2.wav`);
       openSound.play();
     }
     sendExpandedStatToParent(!expanded); // Send the expanded value to the parent component
@@ -92,7 +92,7 @@ function Projects({ sendExpandedStatToParent }) {
                   <span className="relative flex items-center justify-center text-black transition-colors duration-300 ease-in-out">
                     Code
                     <div className="flex justify-end ml-3">
-                      <img src="/icons/arrow-top-right.svg" alt="^" className="w-4 h-4 bg-da_green border-da_green border-4"/>
+                      <img src="./portfolio_2024/icons/arrow-top-right.svg" alt="^" className="w-4 h-4 bg-da_green border-da_green border-4"/>
                     </div>
                   </span>
                 </a>
@@ -108,7 +108,7 @@ function Projects({ sendExpandedStatToParent }) {
                     <span className="relative flex items-center justify-center text-black transition-colors duration-300 ease-in-out">
                       More
                       <div className="flex justify-end ml-3">
-                        <img src="/icons/arrow-right.svg" alt="^" className="w-4 h-4 bg-da_green border-da_green border-4"/>
+                        <img src="./portfolio_2024/icons/arrow-right.svg" alt="^" className="w-4 h-4 bg-da_green border-da_green border-4"/>
                       </div>
                     </span>
                   </a>
@@ -139,7 +139,7 @@ function Projects({ sendExpandedStatToParent }) {
                   <span className="relative flex items-center justify-center text-black transition-colors duration-300 ease-in-out">
                     Code
                     <div className="flex justify-end ml-3">
-                      <img src="/icons/arrow-top-right.svg" alt="^" className="w-4 h-4 bg-da_green border-da_green border-4"/>
+                      <img src="./portfolio_2024/icons/arrow-top-right.svg" alt="^" className="w-4 h-4 bg-da_green border-da_green border-4"/>
                     </div>
                   </span>
                 </a>
@@ -155,7 +155,7 @@ function Projects({ sendExpandedStatToParent }) {
                     <span className="relative flex items-center justify-center text-black transition-colors duration-300 ease-in-out">
                       More
                       <div className="flex justify-end ml-3">
-                        <img src="/icons/arrow-right.svg" alt="^" className="w-4 h-4 bg-da_green border-da_green border-4"/>
+                        <img src="./portfolio_2024/icons/arrow-right.svg" alt="^" className="w-4 h-4 bg-da_green border-da_green border-4"/>
                       </div>
                     </span>
                   </a>

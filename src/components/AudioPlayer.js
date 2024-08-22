@@ -15,7 +15,7 @@ function AudioPlayer( { className } ) {
   const audioRef = useRef(null);
   const { songs, currentSong, setCurrentSongIndex} = useMusicContext();
   useEffect(() => {
-    audioRef.current = new Audio(`/sounds/songs/${currentSong.file}`);
+    audioRef.current = new Audio(`./portfolio_2024/sounds/songs/${currentSong.file}`);
     audioRef.current.addEventListener('timeupdate', updateProgress);
     audioRef.current.addEventListener('ended', handleNext);
 
@@ -75,7 +75,7 @@ function AudioPlayer( { className } ) {
       <div className="audio-player lg:w-[17.5rem] w-[12.5rem] bg-zinc-100 p-4 rounded-lg border-2 border-black">
         <div className="grid-cols-2">
           <div className="grid grid-cols-3 items-center">
-            <img className="w-[4rem] h-[4rem] col-span-1" src={`/album_art/${currentSong.albumArt}`} alt={`${currentSong.title} album art`} />
+            <img className="w-[4rem] h-[4rem] col-span-1" src={`./portfolio_2024/album_art/${currentSong.albumArt}`} alt={`${currentSong.title} album art`} />
             <div className='col-span-2 ml-2'>
               <p className='font-semibold uppercase text-left text-xl'>
                 {currentSong.title}
@@ -86,9 +86,9 @@ function AudioPlayer( { className } ) {
             </div>
           </div>
           <div className="controls mt-4 font-Inter grid grid-cols-3 place-content-between justify-items-center">  
-            <img className="w-5 h-5 cursor-pointer" src="/icons/fast_rewind.svg" alt="Previous" onClick={handlePrevious} />
-            <img className="w-5 h-5 cursor-pointer" src={isPlaying ? "/icons/pause-icon.svg" : "/icons/play-icon.svg"} alt={isPlaying ? "Pause" : "Play"} onClick={togglePlay} />
-            <img className="w-5 h-5 cursor-pointer" src="/icons/fast_forward.svg" alt="Next" onClick={handleNext} />
+            <img className="w-5 h-5 cursor-pointer" src="./portfolio_2024/icons/fast_rewind.svg" alt="Previous" onClick={handlePrevious} />
+            <img className="w-5 h-5 cursor-pointer" src={isPlaying ? "./portfolio_2024/icons/pause-icon.svg" : "./portfolio_2024/icons/play-icon.svg"} alt={isPlaying ? "Pause" : "Play"} onClick={togglePlay} />
+            <img className="w-5 h-5 cursor-pointer" src="./portfolio_2024/icons/fast_forward.svg" alt="Next" onClick={handleNext} />
           </div>
         </div>
         <input

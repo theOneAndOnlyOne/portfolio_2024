@@ -9,7 +9,7 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Main />} />
+        <Route path="/portfolio_2024" element={<Main />} />
         {/* Other routes */}
       </Routes>
     </AnimatePresence>

@@ -14,7 +14,7 @@ function SongInfo() {
                 <p>
                     You are Listening to <span className="bg-da_green"><strong>{currentSong.title}</strong></span> by <em>{currentSong.artist}</em>
                 </p>
-                <img className='ml-2 w-5 h-5 cursor-pointer' src="/icons/spotify.svg" alt="Spotify Logo" onClick={handleImageClick} />
+                <img className='ml-2 w-5 h-5 cursor-pointer' src="./portfolio_2024/icons/spotify.svg" alt="Spotify Logo" onClick={handleImageClick} />
             </div>
         </div>
     );

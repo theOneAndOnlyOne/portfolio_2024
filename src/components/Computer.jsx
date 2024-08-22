@@ -10,7 +10,7 @@ import * as THREE from "three";
 import { GhibliShader } from "./GhibliShader";
 
 export const Computer = forwardRef((props, ref) => {
-  const { nodes, materials } = useGLTF('/3d_models/elComputer.glb')
+  const { nodes, materials } = useGLTF('./portfolio_2024/3d_models/computer.glb')
 
   const uniforms = useMemo(
     () => ({
