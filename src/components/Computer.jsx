@@ -10,7 +10,7 @@ import * as THREE from "three";
 import { GhibliShader } from "./GhibliShader";
 
 export const Computer = forwardRef((props, ref) => {
-  const { nodes, materials } = useGLTF('./portfolio_2024/3d_models/computer.glb')
+  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/3d_models/computer.glb')
 
   const uniforms = useMemo(
     () => ({
@@ -165,4 +165,4 @@ videoTexture.magFilter = THREE.LinearFilter;
   )
 });
 
-useGLTF.preload('./portfolio_2024/3d_models/computer.glb')
+useGLTF.preload(process.env.PUBLIC_URL + '/3d_models/computer.glb')

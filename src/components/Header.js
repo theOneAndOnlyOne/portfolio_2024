@@ -22,10 +22,10 @@ function Header() {
   const toggleShowMore = () => {
     setShowMore(!showMore);
     if (!showMore) {
-      const openSound = new Audio(`./portfolio_2024/sounds/sfx/open.wav`);
+      const openSound = new Audio(process.env.PUBLIC_URL + `/sounds/sfx/open.wav`);
       openSound.play();
     } else {
-      const closeSound = new Audio(`./portfolio_2024/sounds/sfx/close.wav`);
+      const closeSound = new Audio(process.env.PUBLIC_URL + `/sounds/sfx/close.wav`);
       closeSound.play();
     }
   };
@@ -38,7 +38,7 @@ function Header() {
       <p className="font-Inter font-normal mt-6">—and that's what matters.</p>
       <div className={`transition-all duration-500 ${showMore ? 'max-h-[1000px]' : 'max-h-0'} overflow-hidden ${showMore ? '' : 'm-0'}`}>
         <div className="border-2 border-dashed border-da_green rounded-md mt-4 p-2">
-          <img src="/portfolio_2024/images/dance.gif" alt="Dance GIF" className="w-32 h-32 self-center" />
+          <img src={process.env.PUBLIC_URL + "/images/dance.gif"} alt="Dance GIF" className="w-32 h-32 self-center" />
           <p className="font-Inter font-light">
             <em>Make it Fun. Make it Cool. Make it Yours.</em>
           </p>
@@ -68,7 +68,7 @@ function Header() {
           <span className="relative flex items-center justify-center text-black transition-colors duration-300 ease-in-out">
             {showMore ? 'Minimize' : 'Learn More'}
             <div className="flex justify-end ml-2">
-              <img src={showMore ? "/portfolio_2024/icons/close.svg" : "/portfolio_2024/icons/play-icon.svg"} alt=">" className="w-4 h-4" />
+              <img src={showMore ? process.env.PUBLIC_URL +"/icons/close.svg" : process.env.PUBLIC_URL +"/icons/play-icon.svg"} alt=">" className="w-4 h-4" />
             </div>
           </span>
         </button>
@@ -84,7 +84,7 @@ function Header() {
           <span className="relative flex items-center justify-center text-black transition-colors duration-300 ease-in-out">
             Email Me
             <div className="flex justify-end ml-2">
-              <img src="/portfolio_2024/icons/copy-icon.svg" alt=">" className="w-5 h-5  bg-da_green border-da_green border-2" />
+              <img src={process.env.PUBLIC_URL + "/icons/copy-icon.svg"} alt=">" className="w-5 h-5  bg-da_green border-da_green border-2" />
             </div>
           </span>
         </button>

@@ -38,7 +38,7 @@ function Main() {
       </div>
       </div>
       <video id="video" className='hidden' loop>
-        <source src="./portfolio_2024/videos/test2.mp4" type="video/mp4"></source>
+        <source src={process.env.PUBLIC_URL+ "/videos/test2.mp4"} type="video/mp4"></source>
       </video>
     </div>
 

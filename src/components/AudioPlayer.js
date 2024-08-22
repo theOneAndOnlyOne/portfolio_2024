@@ -15,7 +15,7 @@ function AudioPlayer( { className } ) {
   const audioRef = useRef(null);
   const { songs, currentSong, setCurrentSongIndex} = useMusicContext();
   useEffect(() => {
-    audioRef.current = new Audio(`./portfolio_2024/sounds/songs/${currentSong.file}`);
+    audioRef.current = new Audio(`${process.env.PUBLIC_URL}/sounds/songs/${currentSong.file}`);
     audioRef.current.addEventListener('timeupdate', updateProgress);
     audioRef.current.addEventListener('ended', handleNext);
 
@@ -75,7 +75,7 @@ function AudioPlayer( { className } ) {
       <div className="audio-player lg:w-[17.5rem] w-[12.5rem] bg-zinc-100 p-4 rounded-lg border-2 border-black">
         <div className="grid-cols-2">
           <div className="grid grid-cols-3 items-center">
-            <img className="w-[4rem] h-[4rem] col-span-1" src={`./portfolio_2024/album_art/${currentSong.albumArt}`} alt={`${currentSong.title} album art`} />
+            <img className="w-[4rem] h-[4rem] col-span-1" src={`${process.env.PUBLIC_URL}/album_art/${currentSong.albumArt}`} alt={`${currentSong.title} album art`} />
             <div className='col-span-2 ml-2'>
               <p className='font-semibold uppercase text-left text-xl'>
                 {currentSong.title}
@@ -86,9 +86,9 @@ function AudioPlayer( { className } ) {
             </div>
           </div>
           <div className="controls mt-4 font-Inter grid grid-cols-3 place-content-between justify-items-center">  
-            <img className="w-5 h-5 cursor-pointer" src="./portfolio_2024/icons/fast_rewind.svg" alt="Previous" onClick={handlePrevious} />
-            <img className="w-5 h-5 cursor-pointer" src={isPlaying ? "./portfolio_2024/icons/pause-icon.svg" : "./portfolio_2024/icons/play-icon.svg"} alt={isPlaying ? "Pause" : "Play"} onClick={togglePlay} />
-            <img className="w-5 h-5 cursor-pointer" src="./portfolio_2024/icons/fast_forward.svg" alt="Next" onClick={handleNext} />
+            <img className="w-5 h-5 cursor-pointer" src={process.env.PUBLIC_URL + "/icons/fast_rewind.svg"} alt="Previous" onClick={handlePrevious} />
+            <img className="w-5 h-5 cursor-pointer" src={isPlaying ? process.env.PUBLIC_URL+"/icons/pause-icon.svg" : process.env.PUBLIC_URL + "/icons/play-icon.svg"} alt={isPlaying ? "Pause" : "Play"} onClick={togglePlay} />
+            <img className="w-5 h-5 cursor-pointer" src={process.env.PUBLIC_URL + "/icons/fast_forward.svg"} alt="Next" onClick={handleNext} />
           </div>
         </div>
         <input
