@@ -8,7 +8,7 @@ import { FiberContainer } from './FiberContainer';
 function Main() {  
   return (
     <div className="App">
-      <div className="relative min-h-screen selection:bg-da_green md:bg-ghibli bg-zinc-100 md:bg-cover overflow-hidden">
+      <div className="relative min-h-screen selection:bg-da_green md:bg-zinc-100 bg-zinc-100 md:bg-cover overflow-hidden ">
         <div className="">
           <div className="relative z-10 fade-in-anim">
             <MusicProvider>
@@ -18,6 +18,7 @@ function Main() {
                 </div>
                 <div className="relative z-30 md:w-full flex items-center justify-center">
                   <div className="absolute inset-0 z-0 md:h-[100rem]">
+                    <FiberContainer />
                   </div>
                 </div>
                 <div className="md:flex md:flex-col md:items-end relative z-30">
@@ -36,6 +37,9 @@ function Main() {
         <p className="uppercase font-DMMono">@Joshua Gonzales</p>
       </div>
       </div>
+      <video id="video" className='hidden' loop>
+        <source src="/videos/test2.mp4" type="video/mp4"></source>
+      </video>
     </div>
 
     

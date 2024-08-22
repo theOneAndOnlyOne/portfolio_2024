@@ -1,16 +1,33 @@
 import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
-import { Trees } from "./Trees";
-import { Model } from "./Model";
-import { Color } from "three";
+import { useFrame, useThree } from "@react-three/fiber";
+import { Computer } from "./Computer";
+import { Color, Vector2, Euler } from "three";
 
 export function Scene() {
-  const refTrees = useRef(null);
+  const refComputer = useRef(null);
+  const mouse = useRef(new Vector2());
+  const { viewport } = useThree();
+  const time = useRef(0);
+  const baseRotation = useRef(new Euler());
 
-  useFrame(() => {
-    const { current: group } = refTrees;
+  useFrame(({ mouse: { x, y } }) => {
+    const { current: group } = refComputer;
     if (group) {
-      group.rotation.x = group.rotation.y += 0.002;
+      // Update mouse position
+      mouse.current.x = (x * viewport.width) / 2;
+      mouse.current.y = (y * viewport.height) / 2;
+
+      // Update time
+      time.current += 0.005;
+
+      // Store the base rotation if it hasn't been set yet
+      if (baseRotation.current.equals(new Euler())) {
+        baseRotation.current.copy(group.rotation);
+      }
+      group.rotation.x = baseRotation.current.x + 0.01*Math.sin(time.current);
+      group.rotation.y = baseRotation.current.y + 0.013*Math.sin(time.current+2);
+      // Keep the sine wave movement for y position
+      group.position.y = 0.1 * Math.sin(time.current) + 1;
     }
   });
 
@@ -24,8 +41,8 @@ export function Scene() {
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
       />
-        <Model
-        ref={refTrees}
+      <Computer
+        ref={refComputer}
         position={[0, 0, 0]}
         colors={[
           new Color("#344541").convertLinearToSRGB(),
