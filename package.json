@@ -1,7 +1,7 @@
 {
   "name": "jg-portfolio",
   "version": "0.1.0",
-  "homepage": "https://theoneandonlyone.github.io/",
+  "homepage": "https://theoneandonlyone.github.io/portfolio_2024",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.109.2",
