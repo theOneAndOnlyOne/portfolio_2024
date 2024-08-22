@@ -40,7 +40,8 @@ function Projects({ sendExpandedStatToParent }) {
       name: 'squareSlayer',
       description: 'squareSlayer is my first dive into Unity. A 2D Unity Arena shooter using C# and Unity. Developed during my high school days.',
       image: '/images/squareslayer.gif',
-      link: 'https://github.com/theOneAndOnlyOne/'
+      link: 'https://github.com/theOneAndOnlyOne/',
+      more: 'https://theoneandonlyone.github.io/squareSlayer/'
     },
     {
       name: 'LonkOn',
