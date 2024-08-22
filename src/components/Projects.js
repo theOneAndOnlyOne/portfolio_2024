@@ -19,7 +19,7 @@ function Projects({ sendExpandedStatToParent }) {
     {
       name: 'thisOneAndOnly.github.io',
       description: 'theOneAndOnly.github.io is my fourth iteration of a portfolio website using React and Figma. Prototyped, tested and deployed using various tools, it was a project that taught myself a lot about the creative process of webdesign.',
-      link: 'https://github.com/theOneAndOnlyOne/theOneAndOnlyOne.github.io',
+      link: 'https://github.com/theOneAndOnlyOne/portfolio_2024',
       more: 'https://www.figma.com/design/96W7F1ffBjzuvIdk4O7FEY/Portfolio-v4?node-id=0-1&t=zoNM18WP2KgJvkuA-1'
     },
     {
