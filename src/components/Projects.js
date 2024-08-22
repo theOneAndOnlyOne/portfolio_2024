@@ -129,6 +129,7 @@ function Projects({ sendExpandedStatToParent }) {
             {more_projects.map((project, index) => (
               <div key={index} className="project-card space-y-4">
                 <p>{boldWord(project.description)}</p>
+                <div className='flex space-x-3'>
                 {project.link && (
                 <a 
                   href={project.link}
@@ -161,6 +162,7 @@ function Projects({ sendExpandedStatToParent }) {
                     </span>
                   </a>
                 )}
+                </div>
               </div>
             ))}
             </div>
