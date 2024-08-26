@@ -22,18 +22,29 @@ function App() {
     </Router>
   );
 }
+
 console.log('hey wait you arn\'t supposed to be here. There is nothing to look for here, move along.');
 const secretCode = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
+const lobotomyCode = ['l', 'o', 'b', 'o', 't', 'o', 'm', 'y'];
 let userInput = [];
+let secretInput = [];
+let lobotomyInput = [];
 
 document.addEventListener('keydown', (event) => {
   console.log(event.key);
   userInput.push(event.key);
-  userInput = userInput.slice(-secretCode.length); // Keep only the last N keys
-
-  if (userInput.join(',') === secretCode.join(',')) {
+  secretInput = userInput.slice(-secretCode.length); // Keep only the last N keys
+  if (secretInput.join(',') === secretCode.join(',')) {
     console.log('OK FINE YOU GOT ME! NOW GO AWAY');
     // Perform the desired action here
+  }
+
+  lobotomyInput = userInput.slice(-lobotomyCode.length); // Keep only the last N keys
+  if (lobotomyInput.join(',') === lobotomyCode.join(',')) {
+    console.log('el lobotomy');
+    // Perform the desired action here
+    const lobotomySound = new Audio(process.env.PUBLIC_URL + `/sounds/sfx/lobotomy.mp3`);
+    lobotomySound.play();
   }
 });
 
